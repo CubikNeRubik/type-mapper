@@ -1,4 +1,4 @@
-import { TypeMapper } from "./mapper/mapper";
+import { Mapper } from "./mapper/mapper";
 import { Animal } from "./models/animal";
 import { AnimalDto } from "./models/animal.dto";
 
@@ -13,7 +13,7 @@ class Main {
       animal.age = 18;
       animal.color = 'brown';
 
-      const mapper = new TypeMapper();
+      const mapper = new Mapper();
 
       // mapper.map() is mutable
       const result = mapper.mapTo<AnimalDto, Animal>(human, animal);

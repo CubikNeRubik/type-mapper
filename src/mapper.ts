@@ -1,9 +1,9 @@
 import { Types } from "./enums/types.enum";
-import { IMapper } from "./interfaces/mapper.interface";
+import { ITypeMapper } from "./interfaces/typemapper.interface";
 import { Mapping } from "./mapping";
 import { toType } from "./utils";
 
-export class Mapper implements IMapper{
+export class TypeMapper implements ITypeMapper{
   private mappings: any[] = [];
 
   public createMap<ISource, IDest>(source: new () => ISource, dest: new () => IDest): Mapping<ISource, IDest> {

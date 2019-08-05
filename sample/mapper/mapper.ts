@@ -1,8 +1,8 @@
-import { Mapper } from "../../src/mapper";
+import { TypeMapper, Types } from "../../src/";
 import { Animal } from "../models/animal";
 import { AnimalDto } from "../models/animal.dto";
 
-export class TypeMapper extends Mapper {
+export class Mapper extends TypeMapper {
   constructor() {
     super();
     this.config();
@@ -10,6 +10,8 @@ export class TypeMapper extends Mapper {
 
   private config(): void {
     this.createMap(AnimalDto, Animal)
-      .forMember('name', p => `${p.firstname} ${p.lastname}`);
+      .forMember('name', p => `${p.firstname} ${p.lastname}`)
+      .forMember('age', p => p.age)
+      .is(Types.NUMBER);
   }
 }

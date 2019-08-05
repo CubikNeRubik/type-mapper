@@ -1,4 +1,4 @@
-import { TypeMapper } from "./mapper/mapper";
+import { Mapper } from "./mapper/mapper";
 import { Animal } from "./models/animal";
 import { AnimalDto } from "./models/animal.dto";
 
@@ -9,7 +9,7 @@ class Main {
       human.lastname = "Haidei";
       human.age = 18;
 
-      const mapper = new TypeMapper();
+      const mapper = new Mapper();
 
       const animal = mapper.map(human, Animal);
 
