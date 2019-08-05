@@ -1,5 +1,5 @@
 {
-  "name": "type-mapper",
+  "name": "@cubik_ne_rubik/type-mapper",
   "version": "0.9.0",
   "description": "Object mapper for TypeScript",
   "scripts": {
