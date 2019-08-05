@@ -4,6 +4,7 @@
   "description": "Object mapper for TypeScript",
   "scripts": {
     "build": "rimraf ./lib && tsc",
+    "publish": "npm run build && np",
     "build:sample": "rimraf ./sample/dist && tsc -p ./sample/tsconfig.sample.json",
     "run:sample1": "npm run build:sample && node ./sample/dist/sample/mapObject.js",
     "run:sample2": "npm run build:sample && node ./sample/dist/sample/mapObjectToObject.js",
@@ -11,15 +12,16 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
-  "author": "Marluan Espiritusanto",
+  "author": "Vlad Haidei",
   "license": "MIT",
   "files": [
     "lib/**/*"
   ],
-  "main": "./lib/typemapper.js",
-  "types": "./lib/typemapper.d.ts",
-  "directories": {
-    "lib": "dist"
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CubikNeRubik/type-mapper"
   },
   "keywords": [
     "typescript",
