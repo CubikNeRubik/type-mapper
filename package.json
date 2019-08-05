@@ -1,6 +1,6 @@
 {
-  "name": "ts-mapper",
-  "version": "1.1.5",
+  "name": "type-mapper",
+  "version": "0.9.0",
   "description": "Object mapper for TypeScript",
   "scripts": {
     "build": "rimraf ./lib && tsc",
