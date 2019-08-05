@@ -1,4 +1,4 @@
-# TypeScript Automapper
+# TypeScript TypeMapper
 
 Inspired by [MaDEiN83](https://github.com/MADEiN83) mapper
 and [MarluanEspiritusanto](https://github.com/MarluanEspiritusanto) ts-mapper
@@ -6,7 +6,7 @@ and [MarluanEspiritusanto](https://github.com/MarluanEspiritusanto) ts-mapper
 ## Installation
 
 ```bash
-$ npm install ts-mapper
+$ npm install type-mapper
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ You can chain your rules !
 
 ### Conditionnal mapping
 
-`conditions` method allows you to check if the previous `map` will be analysed and mapped to the destination object.
+`conditions` method allows you to check if the previous `forMember` will be analysed and mapped to the destination object.
 
 Example:
 We want to map the property `srcProperty` (source object) into `destProperty` (destination object) only if the property `visible` of the source object is `true`.
@@ -105,7 +105,7 @@ Sometime the source properties don't match the destination properties.
 
 Example: `AnimalDto.age` can be a `string` and `Animal.age` is a `number`.
 
-To work with, you can cast property by chaining the `is` method after a `map`.
+To work with, you can cast property by chaining the `is` method after a `forMember`.
 
 ```ts
 import { TypeMapper, AutoMapperTypes } from "ts-mapper";
